@@ -79,7 +79,7 @@ for source in sources:
         c_sources += ' \\\n  ' + source
     elif ext == '.s':
         asm_sources = asm_sources + ' \\\n  ' + source
-    else:
+    elif ext != '.txt':
         sys.stderr.write("Unknow source file type: %s\r\n" % source)
         sys.exit(-5)
 
